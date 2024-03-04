@@ -1,22 +1,21 @@
 #include <stdio.h>
  float crystalTienDien(int soKWh) {
- 	float pay;
+ 	float bank;
  	if (soKWh<=50){
- 		pay = soKWh *500 ;
+ 		bank = soKWh *500 ;
 	 }
 	 else if(soKWh<=100){
-	 	pay = 50 * 500 + (soKWh-50) * 700;
+	 	bank = 50 * 500 + (soKWh-50) * 700;
 	 }
 	 else{
-	 	pay = 50 * 500 + 50 *700 + (soKWh-100) * 900;
+	 	bank = 50 * 500 + 50 *700 + (soKWh-100) * 900;
 	 }
-	 return pay;
+	 return bank;
  }
  int main(){
- 	int KWh1=30,KWh2=80,KWh3=120;
- 	printf("Electricity bill for %d kWh: %f VND\n", KWh1, crystalTienDien(KWh1));
-    printf("Electricity bill for %d kWh: %f VND\n", KWh2, crystalTienDien(KWh2));
-    printf("Electricity bill for %d kWh: %f VND\n", KWh3, crystalTienDien(KWh3));
+ 	int Cantra1=30,Cantra2=80,Cantra3=120;
+ 	printf("Electricity bill for %d kWh: %.2f VND\n", Cantra1, crystalTienDien(Cantra1));
+    printf("Electricity bill for %d kWh: %.2f VND\n", Cantra2, crystalTienDien(Cantra2));
+    printf("Electricity bill for %d kWh: %.2f VND\n", Cantra3, crystalTienDien(Cantra3));
 
-    return 0;
- }
+    return 0;}
